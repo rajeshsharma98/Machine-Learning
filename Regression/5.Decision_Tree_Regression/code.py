@@ -25,13 +25,11 @@ prices = nyc_pumpkins.values[:, 1:2]
 X = prices
 y = sizes
 
-
 from sklearn.tree import DecisionTreeRegressor
 regressor = DecisionTreeRegressor(random_state = 0)
 regressor.fit(X, y)
 
-y_pred = regressor.predict(np.array(250).reshape(1,-1))
-print(y_pred)
+#y_pred = regressor.predict(np.array(250).reshape(1,-1))
 
 # Visualising the Decision Tree Regression results (higher resolution)
 X_grid = np.arange(min(X), max(X), 0.01)
